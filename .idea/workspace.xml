@@ -8,67 +8,26 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SkyStone-master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples/ConceptTensorFlowObjectDetectionWebcam.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="71" column="393" selection-start-line="71" selection-start-column="393" selection-end-line="71" selection-end-column="393" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SkyStone-master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples/ConceptVuforiaSkyStoneNavigation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="111" column="394" selection-start-line="111" selection-start-column="394" selection-end-line="111" selection-end-column="394" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SkyStone-master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples/ConceptVuforiaSkyStoneNavigationWebcam.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="105" column="393" selection-start-line="105" selection-start-column="393" selection-end-line="105" selection-end-column="393" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SkyStone-master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples/ConceptVuMarkIdentification.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1037">
-              <caret line="104" column="421" selection-start-line="104" selection-start-column="421" selection-end-line="104" selection-end-column="421" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SkyStone-master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples/ConceptVuMarkIdentificationWebcam.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1241">
-              <caret line="117" column="421" selection-start-line="117" selection-start-column="421" selection-end-line="117" selection-end-column="421" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SkyStone-master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples/ConceptVuforiaNavigation.java">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="137" column="26" selection-start-line="137" selection-start-column="26" selection-end-line="137" selection-end-column="26" />
+            <state relative-caret-position="187">
+              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SkyStone-master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples/ConceptVuforiaNavigationWebcam.java">
+        <entry file="file://$PROJECT_DIR$/.idea/FTC-GreenTeam.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1564">
-              <caret line="149" column="421" selection-start-line="149" selection-start-column="421" selection-end-line="149" selection-end-column="421" />
+            <state relative-caret-position="391">
+              <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -115,195 +74,19 @@
             <path>
               <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
               <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
-              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
               <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
-              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
-              <item name="FtcRobotController" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
-              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
-              <item name="FtcRobotController" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
-              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
-              <item name="FtcRobotController" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
-              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
-              <item name="FtcRobotController" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
-              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
-              <item name="FtcRobotController" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
-              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
-              <item name="FtcRobotController" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="firstinspires" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
-              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
-              <item name="FtcRobotController" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="firstinspires" type="462c0819:PsiDirectoryNode" />
-              <item name="ftc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
-              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
-              <item name="FtcRobotController" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="firstinspires" type="462c0819:PsiDirectoryNode" />
-              <item name="ftc" type="462c0819:PsiDirectoryNode" />
-              <item name="robotcontroller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
-              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
-              <item name="FtcRobotController" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="firstinspires" type="462c0819:PsiDirectoryNode" />
-              <item name="ftc" type="462c0819:PsiDirectoryNode" />
-              <item name="robotcontroller" type="462c0819:PsiDirectoryNode" />
-              <item name="external" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
-              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
-              <item name="FtcRobotController" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="firstinspires" type="462c0819:PsiDirectoryNode" />
-              <item name="ftc" type="462c0819:PsiDirectoryNode" />
-              <item name="robotcontroller" type="462c0819:PsiDirectoryNode" />
-              <item name="external" type="462c0819:PsiDirectoryNode" />
-              <item name="samples" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
-              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
-              <item name="TeamCode" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
-              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
-              <item name="TeamCode" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
-              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
-              <item name="TeamCode" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
-              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
-              <item name="TeamCode" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
-              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
-              <item name="TeamCode" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
-              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
-              <item name="TeamCode" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="firstinspires" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
-              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
-              <item name="TeamCode" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="firstinspires" type="462c0819:PsiDirectoryNode" />
-              <item name="ftc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
-              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
-              <item name="TeamCode" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="firstinspires" type="462c0819:PsiDirectoryNode" />
-              <item name="ftc" type="462c0819:PsiDirectoryNode" />
-              <item name="teamcode" type="462c0819:PsiDirectoryNode" />
+              <item name=".vs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -337,9 +120,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <layout>
-      <window_info id="Build Variants" side_tool="true" />
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.11409396" />
       <window_info id="Structure" order="2" side_tool="true" />
@@ -348,17 +130,18 @@
       <window_info id="Resources Explorer" order="5" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Android Profiler" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Logcat" />
+      <window_info id="Build Variants" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="TODO" order="1" />
       <window_info anchor="bottom" id="Terminal" order="2" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
-      <window_info anchor="right" id="Device File Explorer" side_tool="true" />
+      <window_info anchor="bottom" id="Logcat" order="4" />
+      <window_info anchor="bottom" id="Android Profiler" order="5" show_stripe_button="false" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Theme Preview" order="1" />
       <window_info anchor="right" id="Assistant" order="2" weight="0.19798657" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Device File Explorer" order="4" side_tool="true" />
     </layout>
   </component>
   <component name="editorHistoryManager">
