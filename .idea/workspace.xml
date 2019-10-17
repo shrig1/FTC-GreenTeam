@@ -17,7 +17,7 @@
         <entry file="file://$PROJECT_DIR$/SkyStone-master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Skystone-color">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="324">
-              <caret line="185" column="12" selection-start-line="185" selection-start-column="12" selection-end-line="185" selection-end-column="12" />
+              <caret line="185" selection-start-line="185" selection-end-line="185" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5013#5014#0" expanded="true" />
@@ -332,7 +332,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.30465445" />
@@ -446,7 +445,7 @@
     <entry file="file://$PROJECT_DIR$/SkyStone-master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Skystone-color">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
-          <caret line="185" column="12" selection-start-line="185" selection-start-column="12" selection-end-line="185" selection-end-column="12" />
+          <caret line="185" selection-start-line="185" selection-end-line="185" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5013#5014#0" expanded="true" />
