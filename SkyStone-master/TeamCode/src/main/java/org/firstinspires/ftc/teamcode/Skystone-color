@@ -183,7 +183,7 @@ public class SensorColor extends LinearOpMode {
                     .addData("g", "%02x", Color.green(color))
                     .addData("b", "%02x", Color.blue(color));
             telemetry.update();
-
+            
             // convert the RGB values to HSV values.
             Color.RGBToHSV(Color.red(color), Color.green(color), Color.blue(color), hsvValues);
 
