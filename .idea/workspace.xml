@@ -13,27 +13,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SkyStone-master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Skystone-color">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="160" column="61" selection-start-line="160" selection-start-column="61" selection-end-line="160" selection-end-column="61" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5013#5014#0" expanded="true" />
-                <element signature="e#5099#5100#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SkyStone-master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples/BasicOpMode_Iterative.java">
+        <entry file="file://$PROJECT_DIR$/SkyStone-master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/TELEMETRY">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="126" column="54" lean-forward="true" selection-start-line="126" selection-start-column="54" selection-end-line="126" selection-end-column="54" />
+            <state relative-caret-position="134">
+              <caret line="53" column="8" lean-forward="true" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
               <folding>
                 <element signature="e#0#5837#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -42,20 +29,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SkyStone-master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples/ConceptTensorFlowObjectDetection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1564">
-              <caret line="127" column="23" selection-start-line="127" selection-start-column="23" selection-end-line="127" selection-end-column="23" />
+            <state relative-caret-position="272">
+              <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SkyStone-master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples/SensorREVColorDistance.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SkyStone-master/doc/javadoc/com/qualcomm/robotcore/hardware/Gamepad.GamepadCallback.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1938">
-              <caret line="155" column="5" selection-start-line="91" selection-start-column="4" selection-end-line="155" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#7694#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -91,6 +75,7 @@
         <option value="$PROJECT_DIR$/SkyStone-master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples/ConceptVuMarkIdentification.java" />
         <option value="$PROJECT_DIR$/SkyStone-master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples/ConceptVuMarkIdentificationWebcam.java" />
         <option value="$PROJECT_DIR$/SkyStone-master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Skystone-color" />
+        <option value="$PROJECT_DIR$/SkyStone-master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/TELEMETRY" />
       </list>
     </option>
   </component>
@@ -123,6 +108,111 @@
               <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
               <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
               <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
+              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
+              <item name="doc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
+              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
+              <item name="doc" type="462c0819:PsiDirectoryNode" />
+              <item name="javadoc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
+              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
+              <item name="doc" type="462c0819:PsiDirectoryNode" />
+              <item name="javadoc" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
+              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
+              <item name="doc" type="462c0819:PsiDirectoryNode" />
+              <item name="javadoc" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="firstinspires" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
+              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
+              <item name="doc" type="462c0819:PsiDirectoryNode" />
+              <item name="javadoc" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="firstinspires" type="462c0819:PsiDirectoryNode" />
+              <item name="ftc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
+              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
+              <item name="doc" type="462c0819:PsiDirectoryNode" />
+              <item name="javadoc" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="firstinspires" type="462c0819:PsiDirectoryNode" />
+              <item name="ftc" type="462c0819:PsiDirectoryNode" />
+              <item name="robotcore" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
+              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
+              <item name="doc" type="462c0819:PsiDirectoryNode" />
+              <item name="javadoc" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="firstinspires" type="462c0819:PsiDirectoryNode" />
+              <item name="ftc" type="462c0819:PsiDirectoryNode" />
+              <item name="robotcore" type="462c0819:PsiDirectoryNode" />
+              <item name="external" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
+              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
+              <item name="doc" type="462c0819:PsiDirectoryNode" />
+              <item name="javadoc" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="firstinspires" type="462c0819:PsiDirectoryNode" />
+              <item name="ftc" type="462c0819:PsiDirectoryNode" />
+              <item name="robotcore" type="462c0819:PsiDirectoryNode" />
+              <item name="external" type="462c0819:PsiDirectoryNode" />
+              <item name="hardware" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
+              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
+              <item name="doc" type="462c0819:PsiDirectoryNode" />
+              <item name="javadoc" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="firstinspires" type="462c0819:PsiDirectoryNode" />
+              <item name="ftc" type="462c0819:PsiDirectoryNode" />
+              <item name="robotcore" type="462c0819:PsiDirectoryNode" />
+              <item name="external" type="462c0819:PsiDirectoryNode" />
+              <item name="hardware" type="462c0819:PsiDirectoryNode" />
+              <item name="camera" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FTC-GreenTeam" type="462c0819:PsiDirectoryNode" />
+              <item name="SkyStone-master" type="462c0819:PsiDirectoryNode" />
+              <item name="doc" type="462c0819:PsiDirectoryNode" />
+              <item name="javadoc" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="firstinspires" type="462c0819:PsiDirectoryNode" />
+              <item name="ftc" type="462c0819:PsiDirectoryNode" />
+              <item name="robotcore" type="462c0819:PsiDirectoryNode" />
+              <item name="external" type="462c0819:PsiDirectoryNode" />
+              <item name="hardware" type="462c0819:PsiDirectoryNode" />
+              <item name="camera" type="462c0819:PsiDirectoryNode" />
+              <item name="controls" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FTC-GreenTeam" type="b2602c69:ProjectViewProjectNode" />
@@ -312,6 +402,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -344,7 +435,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.30465445" />
@@ -358,7 +448,7 @@
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="TODO" order="1" />
       <window_info anchor="bottom" id="Terminal" order="2" />
-      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" weight="0.32974428" />
       <window_info anchor="bottom" id="Logcat" order="4" />
       <window_info anchor="bottom" id="Android Profiler" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Find" order="6" />
@@ -448,17 +538,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SkyStone-master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples/ConceptTensorFlowObjectDetection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="127" column="23" selection-start-line="127" selection-start-column="23" selection-end-line="127" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SkyStone-master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples/BasicOpMode_Iterative.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="126" column="54" lean-forward="true" selection-start-line="126" selection-start-column="54" selection-end-line="126" selection-end-column="54" />
+        <state relative-caret-position="175">
+          <caret line="112" column="46" selection-start-line="112" selection-start-column="46" selection-end-line="112" selection-end-column="46" />
           <folding>
             <element signature="e#0#5837#0" expanded="true" />
           </folding>
@@ -467,13 +550,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SkyStone-master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/Skystone-color">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="160" column="61" selection-start-line="160" selection-start-column="61" selection-end-line="160" selection-end-column="61" />
+        <state relative-caret-position="2159">
+          <caret line="154" column="51" selection-start-line="154" selection-start-column="51" selection-end-line="154" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5013#5014#0" expanded="true" />
             <element signature="e#5099#5100#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SkyStone-master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/TELEMETRY">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="53" column="8" lean-forward="true" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#5837#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SkyStone-master/doc/javadoc/com/qualcomm/robotcore/eventloop/opmode/Autonomous.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="247" column="23" lean-forward="true" selection-start-line="247" selection-start-column="23" selection-end-line="247" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SkyStone-master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples/ConceptTensorFlowObjectDetection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SkyStone-master/doc/javadoc/com/qualcomm/robotcore/hardware/Gamepad.GamepadCallback.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
     </entry>
