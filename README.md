@@ -1,2 +1,2 @@
 # FTC-GreenTeam
-java and robotics and stuff
+We are the one team who is the best at PHS and has the most skills
