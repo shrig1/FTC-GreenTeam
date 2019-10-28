@@ -104,7 +104,7 @@ public class AutoLinearTest extends LinearOpMode {
             */
             
             leftPower = 1.0;
-            rightPower = runtime/30;
+            rightPower = 1.0;
 
             // Send calculated power to wheels
             leftDrive.setPower(leftPower);
