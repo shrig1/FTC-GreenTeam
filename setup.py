@@ -3,10 +3,11 @@ import sys
 
 packages = ["matplotlib", "numpy", "keras", "tensorflow", "Pillow", "scikit-learn", "opencv-python"] 
 
-def install(package):
+def install():
     for package in packages:
       subprocess.call([sys.executable, "-m", "pip", "install", package])
-     
+
+install()
 print("yeet")
 
 
