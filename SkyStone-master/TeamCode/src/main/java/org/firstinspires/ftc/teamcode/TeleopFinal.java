@@ -1,4 +1,18 @@
+/* -------------- SHRIDEEP IMPLEMENTATION OF SLOWMODE--------------------------------
 
+public slowmode(double factor){
+     leftpower = -gamepad.left_stick_y * factor;
+     rightpower = -gamepad.right_stick_y * factor;
+
+} 
+
+
+
+
+
+
+
+*/
 
 package org.firstinspires.ftc.teamcode;
 
