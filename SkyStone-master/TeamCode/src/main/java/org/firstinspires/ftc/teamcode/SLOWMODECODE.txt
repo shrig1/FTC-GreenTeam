@@ -1,14 +1,17 @@
 /* -------------- SHRIDEEP IMPLEMENTATION OF SLOWMODE--------------------------------
-
 public slowmode(double factor){
      leftpower = -gamepad.left_stick_y;
      rightpower = -gamepad.right_stick_y;
+     
+     
+     leftDrive.setPower(leftPower * factor);
+     rightDrive.setPower(rightPower * factor);
 
 } 
 
 
 
-
+if(gamepad.left_bumper)
 
 
 
