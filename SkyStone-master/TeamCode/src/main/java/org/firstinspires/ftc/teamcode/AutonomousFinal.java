@@ -21,11 +21,9 @@ public class Auto_Finale extends OpMode
     private DcMotor intakeRight = null;
     private DcMotor intakeLeft = null;
 
-    public Servo servo1 = null;
-    public Servo servo2 = null;
-    public Servo servo3 = null;
-    public Servo servo4 = null;
-    
+    public Servo intakePivotLeft = null;
+    public Servo intakePivotRight = null;
+
     NormalizedColorSensor colorSensor;
     
     @Override
@@ -35,10 +33,18 @@ public class Auto_Finale extends OpMode
        
         leftDrive  = hardwareMap.get(DcMotor.class, "left_drive");
         rightDrive = hardwareMap.get(DcMotor.class, "right_drive");
+        
+        intakeRight = hardwareMap.get(DcMotor.class, "left_intake");
+        intakeLeft = hardwareMap.get(DcMotor.class, "right_intake");
+        
+        intakePivotLeft = hardwareMap.get(DcMotor.class, "left_intake_pivot");
+        intakePivotRight = hardwareMap.get(DcMotor.class, "right_intake_pivot");
+        
 
         leftDrive.setDirection(DcMotor.Direction.FORWARD);
         rightDrive.setDirection(DcMotor.Direction.REVERSE);
-
+        
+        intakeLeft.setDirection(DcMotor.Direction.REVERSE);
        
         telemetry.addData("Status", "Initialized");
     }
