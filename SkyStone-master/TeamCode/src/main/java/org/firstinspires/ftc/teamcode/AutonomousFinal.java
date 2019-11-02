@@ -73,7 +73,8 @@ public class Auto_Finale extends OpMode
         double rightPower;
         
         double intakePower
-
+        
+        
 
     }
 
