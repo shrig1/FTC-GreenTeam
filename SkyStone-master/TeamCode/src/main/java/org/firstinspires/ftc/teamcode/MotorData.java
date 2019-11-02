@@ -1,7 +1,7 @@
-public class MotorData {
+public class PeePee {
 
-public double CoreHexTPR() {return 288.0;}
-public double HDHexTPR() {return 2240.0;}
+public double CoreHexTPRPoo() {return 288.0;}
+public double HDHexTPRPoo() {return 2240.0;}
 
 
 }
