@@ -25,7 +25,9 @@ public class Auto_Finale extends OpMode
     public Servo servo2 = null;
     public Servo servo3 = null;
     public Servo servo4 = null;
-
+    
+    NormalizedColorSensor colorSensor;
+    
     @Override
     public void init() {
         telemetry.addData("Status", "Initialized");
