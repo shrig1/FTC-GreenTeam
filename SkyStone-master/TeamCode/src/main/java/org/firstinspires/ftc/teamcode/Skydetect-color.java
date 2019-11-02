@@ -1,7 +1,7 @@
 public class peepee {
 
 public void encoder() {
- int coremethencodevalue = 288;
+ public double coremethencodevalue = 288;
  
 
 }
