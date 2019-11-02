@@ -11,7 +11,10 @@ public slowmode(double factor){
 
 
 
-if(gamepad.left_bumper)
+if(gamepad.left_bumper){
+
+
+}
 
 
 
