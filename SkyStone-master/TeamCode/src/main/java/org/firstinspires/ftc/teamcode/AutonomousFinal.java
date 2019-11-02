@@ -18,11 +18,11 @@ public class Auto_Finale extends OpMode
     private ElapsedTime runtime = new ElapsedTime();
     private DcMotor leftDrive = null;
     private DcMotor rightDrive = null;
-    private DcMotor intakeRight = null;
-    private DcMotor intakeLeft = null;
+    private DcMotor rightIntake = null;
+    private DcMotor leftLntake = null;
 
-    public Servo intakePivotLeft = null;
-    public Servo intakePivotRight = null;
+    public Servo leftIntakePivot = null;
+    public Servo rightIntakePivot = null;
 
     NormalizedColorSensor colorSensor;
     
@@ -34,17 +34,22 @@ public class Auto_Finale extends OpMode
         leftDrive  = hardwareMap.get(DcMotor.class, "left_drive");
         rightDrive = hardwareMap.get(DcMotor.class, "right_drive");
         
-        intakeRight = hardwareMap.get(DcMotor.class, "left_intake");
-        intakeLeft = hardwareMap.get(DcMotor.class, "right_intake");
+        rightIntake = hardwareMap.get(DcMotor.class, "left_intake");
+        leftIntake = hardwareMap.get(DcMotor.class, "right_intake");
         
-        intakePivotLeft = hardwareMap.get(DcMotor.class, "left_intake_pivot");
-        intakePivotRight = hardwareMap.get(DcMotor.class, "right_intake_pivot");
+        leftIntakePivot = hardwareMap.get(DcMotor.class, "left_intake_pivot");
+        rightIntakePivot = hardwareMap.get(DcMotor.class, "right_intake_pivot");
         
 
         leftDrive.setDirection(DcMotor.Direction.FORWARD);
         rightDrive.setDirection(DcMotor.Direction.REVERSE);
         
-        intakeLeft.setDirection(DcMotor.Direction.REVERSE);
+        leftIntake.setDirection(DcMotor.Direction.REVERSE);
+        
+        leftDrive.RunMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        rightDrive.RunMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        rightIntake.RunMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        leftIntake.RunMode(DcMotor.RunMode.RUN_USING_ENCODER); 
        
         telemetry.addData("Status", "Initialized");
     }
@@ -63,12 +68,13 @@ public class Auto_Finale extends OpMode
 
     @Override
     public void loop() {
-   
+        
         double leftPower;
         double rightPower;
+        
+        double intakePower
 
-       leftDrive.setPower(leftPower);
-       rightDrive.setPower(rightPower);
+
     }
 
     @Override
