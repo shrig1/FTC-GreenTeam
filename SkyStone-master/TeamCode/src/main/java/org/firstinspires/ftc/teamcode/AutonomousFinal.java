@@ -28,7 +28,10 @@ public class Auto_Finale extends OpMode
     private ElapsedTime runtime = new ElapsedTime();
     private DcMotor leftDrive = null;
     private DcMotor rightDrive = null;
-
+    public Servo servo1 = null;
+    public Servo servo2 = null;
+    public Servo servo3 = null;
+    public Servo servo4 = null;
     /*
      * Code to run ONCE when the driver hits INIT
      */
