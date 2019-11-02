@@ -57,7 +57,8 @@ public class Auto_Finale extends OpMode
         double leftPower;
         double rightPower;
 
-
+       leftDrive.setPower(leftPower);
+       rightDrive.setPower(rightPower);
     }
 
     @Override
