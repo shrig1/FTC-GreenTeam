@@ -1,7 +1,7 @@
-public class PeePee {
+public class EncodeData {
 
-public double CoreHexTPRPoo() {return 288.0;}
-public double HDHexTPRPoo() {return 2240.0;}
+public double CoreHexTPR() {return 288.0;}
+public double HDHexTPR() {return 2240.0;}
 
 
 }
