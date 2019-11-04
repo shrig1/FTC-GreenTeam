@@ -69,6 +69,9 @@ public class Auto_Finale extends OpMode
     @Override
     public void loop() {
         
+        PeePee encodeData = new PeePee();
+        
+        
         double leftPower;
         double rightPower;
         
