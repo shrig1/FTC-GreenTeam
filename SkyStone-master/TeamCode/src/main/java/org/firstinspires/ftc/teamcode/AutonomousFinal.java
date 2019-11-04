@@ -23,6 +23,9 @@ public class Auto_Finale extends OpMode
 
     public Servo leftIntakePivot = null;
     public Servo rightIntakePivot = null;
+    
+    public static final int coreHexEncode = 288;
+    public static final int dcMotorEncode = 2240;
 
     NormalizedColorSensor colorSensor;
     
@@ -68,8 +71,7 @@ public class Auto_Finale extends OpMode
 
     @Override
     public void loop() {
-        
-        PeePee encodeData = new PeePee();
+     
         
         
         double leftPower;
