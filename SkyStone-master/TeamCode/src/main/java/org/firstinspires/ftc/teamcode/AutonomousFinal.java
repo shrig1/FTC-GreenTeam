@@ -80,6 +80,8 @@ public class Auto_Finale extends OpMode
         double intakePower
         
         
+        
+        
 
     }
 
