@@ -1,7 +1,7 @@
 import subprocess
 import sys
 
-packages = ["matplotlib", "numpy", "keras", "tensorflow", "Pillow", "scikit-learn", "opencv-python"] 
+packages = ["matplotlib", "numpy", "keras", "tensorflow", "Pillow", "scikit-learn", "opencv-python", "theano"] 
 
 def install():
     for package in packages:
