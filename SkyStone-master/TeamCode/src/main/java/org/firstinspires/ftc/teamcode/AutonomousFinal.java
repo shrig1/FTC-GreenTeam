@@ -1,6 +1,9 @@
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
+import com.qualcomm.robotcore.hardware.NormalizedColorSensor;
+import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -12,22 +15,22 @@ import com.qualcomm.robotcore.hardware.SwitchableLight;
 
 
 @Autonomous(name="Auto Finale", group="Iterative Opmode")
-public class Auto_Finale extends OpMode
+public class AutoFinal extends OpMode
 {
     // Declare OpMode members.
     private ElapsedTime runtime = new ElapsedTime();
     private DcMotor leftDrive = null;
     private DcMotor rightDrive = null;
     private DcMotor rightIntake = null;
-    private DcMotor leftLntake = null;
+    private DcMotor leftIntake = null;
 
     public Servo leftIntakePivot = null;
     public Servo rightIntakePivot = null;
+    NormalizedColorSensor colorSensor = null;
     
     public static final int coreHexEncode = 288;
     public static final int dcMotorEncode = 2240;
 
-    NormalizedColorSensor colorSensor;
     
     @Override
     public void init() {
@@ -37,11 +40,11 @@ public class Auto_Finale extends OpMode
         leftDrive  = hardwareMap.get(DcMotor.class, "left_drive");
         rightDrive = hardwareMap.get(DcMotor.class, "right_drive");
         
-        rightIntake = hardwareMap.get(DcMotor.class, "left_intake");
-        leftIntake = hardwareMap.get(DcMotor.class, "right_intake");
+        rightIntake = hardwareMap.get(DcMotor.class, "right_intake");
+        leftIntake = hardwareMap.get(DcMotor.class, "left_intake");
         
-        leftIntakePivot = hardwareMap.get(DcMotor.class, "left_intake_pivot");
-        rightIntakePivot = hardwareMap.get(DcMotor.class, "right_intake_pivot");
+        leftIntakePivot = hardwareMap.get(Servo.class, "left_intake_pivot");
+        rightIntakePivot = hardwareMap.get(Servo.class, "right_intake_pivot");
         
 
         leftDrive.setDirection(DcMotor.Direction.FORWARD);
@@ -49,37 +52,29 @@ public class Auto_Finale extends OpMode
         
         leftIntake.setDirection(DcMotor.Direction.REVERSE);
         
-        leftDrive.RunMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        rightDrive.RunMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        rightIntake.RunMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        leftIntake.RunMode(DcMotor.RunMode.RUN_USING_ENCODER); 
-       
-        telemetry.addData("Status", "Initialized");
+        leftDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        rightDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        rightIntake.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        leftIntake.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        
+        
+
     }
 
  
     @Override
     public void init_loop() {
     }
-
-   
     @Override
     public void start() {
         runtime.reset();
     }
-
-
     @Override
     public void loop() {
-     
-        
-        
         double leftPower;
         double rightPower;
         
-        double intakePower
-        
-        
+        double intakePower;
         
         
 
