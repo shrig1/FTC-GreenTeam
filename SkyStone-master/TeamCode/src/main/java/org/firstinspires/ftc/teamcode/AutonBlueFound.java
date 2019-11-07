@@ -83,10 +83,29 @@ public class AutoFinal extends OpMode
     }
     leftDrive.setPower(0);
     rightDrive.setPower(0);
+    /*
+    INSERT CODE TO TURN HERE. 
     
+    INSERT CODE TO GRAB BUILD SITE HERE.
     
+    CODE TO MOVE BACKWARDS TO BUILDING ZONE.
+        leftDrive.setTargetPosition(INSERT NUMBER HERE);
+        rightDrive.setTargetPosition(INSERT NUMBER HERE);
         
+    while(rightDrive.getCurrentPosition() < rightDrive.getTargetPosition() && leftDrive.getCurrentPosition() < leftDrive.getTargetPosition()) {
+        leftDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        rightDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         
+        leftDrive.setPower(-1);
+        rightDrive.setPower(-1);
+    }
+    
+    leftDrive.setPower(0);
+    rightDrive.setPower(0);
+    
+    INSERT CODE TO PARK UNDERNEATH BRIDGE.
+    
+    */    
 
     }
 
