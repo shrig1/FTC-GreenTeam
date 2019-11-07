@@ -70,13 +70,13 @@ public class AutoFinal extends OpMode
     }
     @Override
     public void loop() {
-        
+        leftDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        rightDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);        
         leftDrive.setTargetPosition(1833);
         rightDrive.setTargetPosition(1833);
     
     while(rightDrive.getCurrentPosition() < rightDrive.getTargetPosition() && leftDrive.getCurrentPosition() < leftDrive.getTargetPosition()) {
-        leftDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
-        rightDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+
         
         leftDrive.setPower(1);
         rightDrive.setPower(1);
