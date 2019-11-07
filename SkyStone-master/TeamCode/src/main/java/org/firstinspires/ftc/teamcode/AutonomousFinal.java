@@ -73,7 +73,6 @@ public class AutoFinal extends OpMode
     public void loop() {
         double leftPower;
         double rightPower;
-        
         double intakePower;
         
         
