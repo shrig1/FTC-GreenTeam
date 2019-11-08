@@ -13,8 +13,8 @@ import com.qualcomm.robotcore.hardware.NormalizedRGBA;
 import com.qualcomm.robotcore.hardware.SwitchableLight;
 
 
-@Autonomous(name="Auto Finale", group="Iterative Opmode")
-public class AutoFinal extends OpMode 
+@Autonomous(name="AutoBlueSky", group="Iterative Opmode")
+public class AutonBlueSky extends OpMode 
 {
     // Declare OpMode members.
     private ElapsedTime runtime = new ElapsedTime();
