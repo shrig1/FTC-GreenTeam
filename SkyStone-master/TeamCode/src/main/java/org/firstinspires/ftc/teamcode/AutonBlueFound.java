@@ -1,9 +1,9 @@
 package org.firstinspires.ftc.teamcode;
-
-import com.qualcomm.robotcore.eventloop.opmode.Disabled;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpmode;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.hardware.Servo;
-import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.ElapsedTime;
@@ -14,7 +14,7 @@ import com.qualcomm.robotcore.hardware.SwitchableLight;
 
 
 @Autonomous(name="AutoBlueFound", group="Iterative Opmode")
-public class AutonBlueFound extends OpMode 
+public class AutonBlueFound extends LinearOpMode 
 {
     // Declare OpMode members.
     private ElapsedTime runtime = new ElapsedTime();
@@ -29,6 +29,8 @@ public class AutonBlueFound extends OpMode
     
     public static final int coreHexEncode = 288;
     public static final int dcMotorEncode = 2240;
+    double ticks = 0;
+    
 
     
     @Override
@@ -56,15 +58,12 @@ public class AutonBlueFound extends OpMode
         rightIntake.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         leftIntake.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         
-        
-
     }
 
  
     @Override
     public void init_loop() {
-        double i = 0;
-        double x = 500; 
+    
     }
     @Override
     public void start() {
@@ -72,36 +71,36 @@ public class AutonBlueFound extends OpMode
     }
     @Override
     public void loop() {
-        // leftDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
-        // rightDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
-        // leftDrive.setTargetPosition(1000);
-        // rightDrive.setTargetPosition(1000);
-        
-       /*if(i<x){
-           leftDrive.setPower(1);
-           rightDrive.setPower(1);
-       }
-        */
+      
+      
+      while(opModeIsActive()){
+      
+      
+      ticks++;
         
         
+        if(ticks > 0 && ticks < ticks*3){
+            leftDrive.setPower(1);
+            rightDrive.setPower(1);
+            
+        }
+        leftDrive.setPower(0);
+        rightDrive.setPower(0);
+        
+        if(ticks > ticks*3 && ticks < ticks*4){
+            leftDrive.setPower(-1);
+            rightDrive.setPower(1);
+        }
+        leftDrive.setPower(0);
+        rightDrive.setPower(0);
         
         
-        //Go forward till we reach the middle of teh two foundations
+      }
         
-    //     leftDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
-    //     rightDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);        
-    //     leftDrive.setTargetPosition(2750);
-    //     rightDrive.setTargetPosition(2750);
-    
-    // if(rightDrive.getCurrentPosition() < rightDrive.getTargetPosition() && leftDrive.getCurrentPosition() < leftDrive.getTargetPosition()) {
-
         
-    //     leftDrive.setPower(1);
-    //     rightDrive.setPower(1);
-    // }
-    // leftDrive.setPower(0);
-    // rightDrive.setPower(0);
-    
+        
+        
+        
     
 }
     @Override
