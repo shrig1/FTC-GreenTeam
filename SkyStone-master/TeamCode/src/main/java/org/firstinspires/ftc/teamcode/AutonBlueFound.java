@@ -5,8 +5,6 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.util.Range;
 
-
-
 @Autonomous(name="AutoBlueFound", group="Linear Opmode")
 public class AutonBlueFound extends LinearOpMode 
 {
@@ -14,13 +12,13 @@ public class AutonBlueFound extends LinearOpMode
     private ElapsedTime runtime = new ElapsedTime();
     private DcMotor leftDrive = null;
     private DcMotor rightDrive = null;
-   
-
     
-
-    double ticks = 0;
-    
-
+	// Put stage timings at top of script to make config easy
+    double ticks = 0; // DO NOT EDIT
+    double firstStage  = 0;
+	double secondStage = firstStage + 8000;
+	double thirdStage  = secondStage + 4000;
+    double fourthStage = thirdStage + 0;
     
     @Override
     public void init() {
@@ -33,44 +31,27 @@ public class AutonBlueFound extends LinearOpMode
       
         leftDrive.setDirection(DcMotor.Direction.REVERSE);
         rightDrive.setDirection(DcMotor.Direction.FORWARD);
-        
- 
-    
-        
-    }
+	}
+}
+
 @Override
- void loop() {
-       
-    
-
-        // run until the end of the match (driver presses STOP)
-        while (opModeIsActive()) {
-            
-            ticks++;
-            // Show the elapsed game time and wheel power.
-            if(ticks > 0 && ticks < ticks*0.5){
-            leftDrive.setPower(1);
-            rightDrive.setPower(1);
-            
-        }
-        leftDrive.setPower(0);
-        rightDrive.setPower(0);
-        
-        if(ticks > ticks*0.5 && ticks < ticks*1.2){
-            leftDrive.setPower(-1);
-            rightDrive.setPower(1);
-        }
-        leftDrive.setPower(0);
-        rightDrive.setPower(0);
-        if(ticks > ticks*1.2 && ticks < ticks*2.5){
-            leftDrive.setPower(1);
-            rightDrive.setPower(1);
-        }
-        leftDrive.setPower(0);
-        rightDrive.setPower(0);
-        
-      }
-        
-        }
-    }
-
+void loop() {    
+	// run until the end of the match (driver presses STOP)
+    while (opModeIsActive()) {
+		ticks++;
+		// Show the elapsed game time and wheel power.
+		if(ticks > firstStage && ticks < secondStage) {
+			leftDrive.setPower(1.0);
+			rightDrive.setPower(1.0);
+		} else if(ticks > secondStage && ticks < thirdStage) {
+			leftDrive.setPower(-1.0);
+			rightDrive.setPower(1.0);
+        } else if(ticks > thirdStage && ticks < fourthStage) {
+			leftDrive.setPower(1.0);
+			rightDrive.setPower(1.0);
+		} else {
+			leftDrive.setPower(0.0);
+			rightDrive.setPower(0.0);
+		}
+	}
+}
