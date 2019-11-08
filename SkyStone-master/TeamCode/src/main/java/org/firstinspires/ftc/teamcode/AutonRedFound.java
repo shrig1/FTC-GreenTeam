@@ -1,34 +1,25 @@
 package org.firstinspires.ftc.teamcode;
-
-import com.qualcomm.robotcore.eventloop.opmode.Disabled;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpmode;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
-import com.qualcomm.robotcore.hardware.Servo;
-import com.qualcomm.robotcore.eventloop.opmode.OpMode;
-import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.util.Range;
-import com.qualcomm.robotcore.hardware.NormalizedColorSensor;
-import com.qualcomm.robotcore.hardware.NormalizedRGBA;
-import com.qualcomm.robotcore.hardware.SwitchableLight;
 
 
-@Autonomous(name="Auto Finale", group="Iterative Opmode")
-public class AutoFinal extends OpMode 
+
+@Autonomous(name="AutoBlueFound", group="Linear Opmode")
+public class AutonBlueFound extends LinearOpMode 
 {
     // Declare OpMode members.
     private ElapsedTime runtime = new ElapsedTime();
     private DcMotor leftDrive = null;
     private DcMotor rightDrive = null;
-    private DcMotor rightIntake = null;
-    private DcMotor leftIntake = null;
+   
 
-    public Servo leftIntakePivot = null;
-    public Servo rightIntakePivot = null;
-    NormalizedColorSensor colorSensor = null;
     
-    public static final int coreHexEncode = 288;
-    public static final int dcMotorEncode = 2240;
+
+    double ticks = 0;
+    
 
     
     @Override
@@ -46,8 +37,8 @@ public class AutoFinal extends OpMode
         rightIntakePivot = hardwareMap.get(Servo.class, "right_intake_pivot");
         
         
-        leftDrive.setDirection(DcMotor.Direction.FORWARD);
-        rightDrive.setDirection(DcMotor.Direction.REVERSE);
+        leftDrive.setDirection(DcMotor.Direction.REVERSE);
+        rightDrive.setDirection(DcMotor.Direction.FORWARD);
         
         leftIntake.setDirection(DcMotor.Direction.REVERSE);
         
@@ -56,13 +47,12 @@ public class AutoFinal extends OpMode
         rightIntake.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         leftIntake.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         
-        
-
     }
 
  
     @Override
     public void init_loop() {
+    
     }
     @Override
     public void start() {
@@ -70,26 +60,43 @@ public class AutoFinal extends OpMode
     }
     @Override
     public void loop() {
+      
+      
+      while(opModeIsActive()){
+      
+      
+      ticks++;
         
-        leftDrive.setTargetPosition(1833);
-        rightDrive.setTargetPosition(1833);
+        
+        if(ticks > 0 && ticks < ticks*0.5){
+            leftDrive.setPower(1);
+            rightDrive.setPower(1);
+            
+        }
+        leftDrive.setPower(0);
+        rightDrive.setPower(0);
+        
+        if(ticks > ticks*0.5 && ticks < ticks*1.2){
+            leftDrive.setPower(1);
+            rightDrive.setPower(-1);
+        }
+        leftDrive.setPower(0);
+        rightDrive.setPower(0);
+        if(ticks > ticks*1.2 && ticks < ticks*2.5){
+            leftDrive.setPower(1);
+            rightDrive.setPower(1);
+        }
+        leftDrive.setPower(0);
+        rightDrive.setPower(0);
+        
+      }
+        
+        
+        
+        
+        
     
-    while(rightDrive.getCurrentPosition() < rightDrive.getTargetPosition() && leftDrive.getCurrentPosition() < leftDrive.getTargetPosition()) {
-        leftDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
-        rightDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
-        
-        leftDrive.setPower(1);
-        rightDrive.setPower(1);
-    }
-    leftDrive.setPower(0);
-    rightDrive.setPower(0);
-    
-    
-        
-        
-
-    }
-
+}
     @Override
     public void stop() {
     }
