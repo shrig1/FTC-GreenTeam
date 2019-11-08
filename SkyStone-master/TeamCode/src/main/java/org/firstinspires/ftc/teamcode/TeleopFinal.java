@@ -1,4 +1,5 @@
 
+
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
@@ -93,18 +94,16 @@ public class TeleOpFinal extends LinearOpMode {
             // rightPower   = Range.clip(drive - turn, -1.0, 1.0) ;
 
 
-            // Tank Mode uses one stick to control each wheel.
-            // - This requires no math, but it is hard to drive forward slowly and keep straight.
-            // leftPower  = -gamepad1.left_stick_y ;
-            // rightPower = -gamepad1.right_stick_y ;
+            
+           
 
             // Send calculated power to wheels
             if(gamepad1.left_stick_button) {
                 leftDrive.setPower(leftPower/2.0);
-                //rightDrive.setPower(rightPower/2.0);
+                rightDrive.setPower(rightPower/2.0);
             } else {
                 leftDrive.setPower(leftPower);
-                //rightDrive.setPower(rightPower);
+                rightDrive.setPower(rightPower);
             }
             if(gamepad1.right_stick_button) {
                 rightDrive.setPower(rightPower/2.0);
@@ -112,49 +111,50 @@ public class TeleOpFinal extends LinearOpMode {
                 rightDrive.setPower(rightPower);
             }
             if(gamepad1.right_bumper) {
-                rightIntake.setPower(rightIntakePower/2.0);
+                rightIntake.setPower(-0.50);
             } else {
-                rightIntake.setPower(rightIntakePower);
+                rightIntake.setPower(rightIntakePower*0.75);
             }
             if(gamepad1.left_bumper) {
-                leftIntake.setPower(leftIntakePower/2.0);
+                leftIntake.setPower(-0.75);
             } else {
-                leftIntake.setPower(leftIntakePower);
+                leftIntake.setPower(leftIntakePower*0.75);
             }
             if(gamepad1.dpad_left) {
-                leftIntakePivot.setPosition(leftIntakePivot.getPosition()-0.005);
+                leftIntakePivot.setPosition(leftIntakePivot.getPosition()-0.001);
             }
             if(gamepad1.dpad_right) {
-                leftIntakePivot.setPosition(leftIntakePivot.getPosition()+0.005);
+                leftIntakePivot.setPosition(leftIntakePivot.getPosition()+0.001);
             }
             if(gamepad1.x) {
-                rightIntakePivot.setPosition(rightIntakePivot.getPosition()-0.005);
+                rightIntakePivot.setPosition(rightIntakePivot.getPosition()-0.001);
             }
             if(gamepad1.b) {
-                rightIntakePivot.setPosition(rightIntakePivot.getPosition()+0.005);
+                rightIntakePivot.setPosition(rightIntakePivot.getPosition()+0.001);
             }
             if(gamepad2.right_bumper){
-                finger.setPosition(finger.getPosition()+0.05);
+                finger.setPosition(finger.getPosition()+0.001);
             }
              if(gamepad2.left_bumper){
-                finger.setPosition(finger.getPosition()-0.05);
+                finger.setPosition(finger.getPosition()-0.001);
             }
             if(gamepad2.dpad_left){
-                wrist.setPosition(wrist.getPosition()+0.05);
+                wrist.setPosition(wrist.getPosition()+0.001);
             }
             if(gamepad2.dpad_right){
-                wrist.setPosition(wrist.getPosition()-0.05);
+                wrist.setPosition(wrist.getPosition()-0.001);
             }
              
             
             if(gamepad2.left_stick_button) {
-                arm.setPower(armPower/2.0);
+                arm.setPower(-0.75);
             } else {
-                arm.setPower(armPower);
+                arm.setPower(0.75*armPower);
             }
             // Show the elapsed game time and wheel power.
             telemetry.addData("Status", "Run Time: " + runtime.toString());
             telemetry.addData("Motors", "left (%.2f), right (%.2f)", leftPower, rightPower);
+            // telemetry.addData("Servos", "left (%.2f), right (%.2f)", "wrist (%.2f)", leftIntakePivot.getPosition(), rightIntakePivot.getPosition(), wrist.getPosition());
             telemetry.update();
         }
     }
