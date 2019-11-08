@@ -50,25 +50,48 @@ public class AutonBlueFound extends LinearOpMode
     }
 
  
+package org.firstinspires.ftc.teamcode;
+
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.robot.Robot;
+import com.qualcomm.robotcore.hardware.Servo;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
+import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.util.ElapsedTime;
+import com.qualcomm.robotcore.util.Range;
+
+
+
+
+@Autonomous(name="AutonBlueFound", group="Linear Opmode")
+
+public class AutonBlueFound extends LinearOpMode {
+
+    // Declare OpMode members.
+    private ElapsedTime runtime = new ElapsedTime();
+    private double ticks = 0.0;
+    private DcMotor leftDrive   = null;
+    private DcMotor rightDrive  = null;
     @Override
-    public void init_loop() {
-    
-    }
-    @Override
-    public void start() {
+    public void runOpMode() {
+        // telemetry.addData("Status", "Initialized");
+        telemetry.update();
+        //telemetry.addData();
+        leftDrive   = hardwareMap.get(DcMotor.class, "left_drive");
+        rightDrive  = hardwareMap.get(DcMotor.class, "right_drive");
+        waitForStart();
         runtime.reset();
-    }
-    @Override
-    public void loop() {
-      
-      
-      while(opModeIsActive()){
-      
-      
-      ticks++;
-        
-        
-        if(ticks > 0 && ticks < ticks*0.5){
+        leftDrive.setDirection(DcMotor.Direction.REVERSE);
+        rightDrive.setDirection(DcMotor.Direction.FORWARD);
+
+        // run until the end of the match (driver presses STOP)
+        while (opModeIsActive()) {
+            
+            ticks++;
+            // Show the elapsed game time and wheel power.
+            if(ticks > 0 && ticks < ticks*0.5){
             leftDrive.setPower(1);
             rightDrive.setPower(1);
             
@@ -91,14 +114,6 @@ public class AutonBlueFound extends LinearOpMode
         
       }
         
-        
-        
-        
-        
-    
-}
-    @Override
-    public void stop() {
+        }
     }
 
-}
