@@ -88,7 +88,7 @@ public class TeleOpFinal extends LinearOpMode {
             double rightPower       = -gamepad1.right_stick_y;
             double leftIntakePower  = gamepad1.left_trigger;
             double rightIntakePower = gamepad1.right_trigger;
-            double armPower         = gamepad2.left_stick_y;
+            double armPower         = gamepad2.left_stick_y/2;
             
             // leftPower    = Range.clip(drive + turn, -1.0, 1.0) ;
             // rightPower   = Range.clip(drive - turn, -1.0, 1.0) ;
@@ -100,9 +100,7 @@ public class TeleOpFinal extends LinearOpMode {
             // Send calculated power to wheels
             if(gamepad1.left_stick_button) {
                 leftDrive.setPower(leftPower/2.0);
-                rightDrive.setPower(rightPower/2.0);
             } else {
-                leftDrive.setPower(leftPower);
                 rightDrive.setPower(rightPower);
             }
             if(gamepad1.right_stick_button) {
@@ -145,7 +143,6 @@ public class TeleOpFinal extends LinearOpMode {
                 wrist.setPosition(wrist.getPosition()-0.001);
             }
              
-            
             if(gamepad2.left_stick_button) {
                 arm.setPower(-0.75);
             } else {
