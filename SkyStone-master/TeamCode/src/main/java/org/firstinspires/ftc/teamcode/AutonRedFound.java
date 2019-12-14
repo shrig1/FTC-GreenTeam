@@ -121,7 +121,7 @@ public class AutoRedFound extends LinearOpMode {
                 leftDrive.setPower(-1.0);
                 rightDrive.setPower(-1.0);//go backwards
             } else if (runtime.seconds() > 3.9 && runtime.seconds() < 4.7) {
-                //arm.setPower(); 1.0 or -1.0?
+                //arm.setPower(); 1.0 or -1.0? This is intended to rotate the arm backwards so that we can pull the buildzone. I couldn't figure out what value to use.
             } else if (runtime.seconds() > 4.7 && runtime.seconds() < 5.9) {
                 leftDrive.setPower(1.0);//go forward
                 rightDrive.setPower(1.0);
