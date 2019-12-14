@@ -93,7 +93,7 @@ public class AutoRedFound extends LinearOpMode {
                 rightDrive.setPower(1.0); //go forward
                 leftDrive.setPower(1.0);
             }else if(runtime.seconds() > 2.1 && runtime.seconds() < 2.8) {
-                rightDrive.setPower(1.0); //go forward mayormaynotbecorrect
+                rightDrive.setPower(1.0); //go forward 
                 leftDrive.setPower(1.0);
             }
             //To park underneath the skybridge (has not been tested yet; to be used in case following porgram does not work)
@@ -122,7 +122,6 @@ public class AutoRedFound extends LinearOpMode {
                 rightDrive.setPower(-1.0);//go backwards
             } else if (runtime.seconds() > 3.9 && runtime.seconds() < 4.7) {
                 //arm.setPower(); 1.0 or -1.0?
-                //wrist.setPower(); 1 or -1.0?
             } else if (runtime.seconds() > 4.7 && runtime.seconds() < 5.9) {
                 leftDrive.setPower(1.0);//go forward
                 rightDrive.setPower(1.0);
