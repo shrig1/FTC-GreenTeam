@@ -83,17 +83,17 @@ public class AutoRedFound extends LinearOpMode {
         while (opModeIsActive()) {
 
             // Setup a variable for each drive wheel to save power level for telemetry
-            if(runtime.seconds() < 0.8) { 
+            if(runtime.seconds() < 1.0) { 
                 leftDrive.setPower(1.0); //go forward
                 rightDrive.setPower(1.0);
-            } else if(runtime.seconds() > 0.8 && runtime.seconds() < 1.2) {
+            } else if(runtime.seconds() > 1.0 && runtime.seconds() < 1.6) {
                 rightDrive.setPower(-1.0); //turn left
                 leftDrive.setPower(1.0);
-            } else if(runtime.seconds() > 1.2 && runtime.seconds() < 2.1) {
+            } else if(runtime.seconds() > 1.6 && runtime.seconds() < 2.5) {
                 rightDrive.setPower(1.0); //go forward
                 leftDrive.setPower(1.0);
-            }else if(runtime.seconds() > 2.1 && runtime.seconds() < 2.8) {
-                rightDrive.setPower(1.0); //go forward 
+            }else if(runtime.seconds() > 2.5 && runtime.seconds() < 3.2) {
+                rightDrive.setPower(1.0); //go forward mayormaynotbecorrect
                 leftDrive.setPower(1.0);
             }
             //To park underneath the skybridge (has not been tested yet; to be used in case following porgram does not work)
@@ -114,15 +114,16 @@ public class AutoRedFound extends LinearOpMode {
                 rightDrive.setPower(0.0);
             }
             */
-            else if (runtime.seconds() > 2.8 && runtime.seconds() < 3.6) {
+            else if (runtime.seconds() > 3.2 && runtime.seconds() < 4.0) {
                 leftDrive.setPower(-1.0);
                 rightDrive.setPower(1.0);//turn right
-            } else if (runtime.seconds() > 3.2 && runtime.seconds() < 3.9) {
+            } else if (runtime.seconds() > 4.0 && runtime.seconds() < 4.7) {
                 leftDrive.setPower(-1.0);
                 rightDrive.setPower(-1.0);//go backwards
-            } else if (runtime.seconds() > 3.9 && runtime.seconds() < 4.7) {
-                //arm.setPower(); 1.0 or -1.0? This is intended to rotate the arm backwards so that we can pull the buildzone. I couldn't figure out what value to use.
-            } else if (runtime.seconds() > 4.7 && runtime.seconds() < 5.9) {
+            } else if (runtime.seconds() > 4.7 && runtime.seconds() < 5.5) {
+                //arm.setPower(); 1.0 or -1.0?
+                //wrist.setPower(); 1 or -1.0?
+            } else if (runtime.seconds() > 5.5 && runtime.seconds() < 6.7) {
                 leftDrive.setPower(1.0);//go forward
                 rightDrive.setPower(1.0);
             }//add more if needed...
