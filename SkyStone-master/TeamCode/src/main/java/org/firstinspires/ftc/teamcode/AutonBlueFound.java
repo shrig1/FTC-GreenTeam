@@ -50,9 +50,9 @@ import com.qualcomm.robotcore.util.Range;
  * Use Android Studios to Copy this Class, and Paste it into your team's code folder with a new name.
  * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
  */
-@Autonomous(name="AutoRedFound", group="Linear Opmode")
+@Autonomous(name="AutoB", group="Linear Opmode")
 
-public class AutoRedFound extends LinearOpMode {
+public class AutoBlueFound extends LinearOpMode {
 
     // Declare OpMode members.
     private ElapsedTime runtime = new ElapsedTime();
@@ -83,16 +83,16 @@ public class AutoRedFound extends LinearOpMode {
         while (opModeIsActive()) {
 
             // Setup a variable for each drive wheel to save power level for telemetry
-            if(runtime.seconds() < 0.8) { 
+            if(runtime.seconds() < 1.0) { 
                 leftDrive.setPower(1.0); //go forward
                 rightDrive.setPower(1.0);
-            } else if(runtime.seconds() > 0.8 && runtime.seconds() < 1.2) {
+            } else if(runtime.seconds() > 1.0 && runtime.seconds() < 1.6) {
                 rightDrive.setPower(1.0); //turn right
                 leftDrive.setPower(-1.0);
-            } else if(runtime.seconds() > 1.2 && runtime.seconds() < 2.1) {
+            } else if(runtime.seconds() > 1.6 && runtime.seconds() < 2.5) {
                 rightDrive.setPower(1.0); //go forward
                 leftDrive.setPower(1.0);
-            }else if(runtime.seconds() > 2.1 && runtime.seconds() < 2.8) {
+            }else if(runtime.seconds() > 2.5 && runtime.seconds() < 3.2) {
                 rightDrive.setPower(1.0); //go forward
                 leftDrive.setPower(1.0);
             }
@@ -114,15 +114,15 @@ public class AutoRedFound extends LinearOpMode {
                 rightDrive.setPower(0.0);
             }
             */
-            else if (runtime.seconds() > 2.8 && runtime.seconds() < 3.6) {
+            else if (runtime.seconds() > 3.2 && runtime.seconds() < 4.0) {
                 leftDrive.setPower(1.0);
                 rightDrive.setPower(-1.0);//turn left
-            } else if (runtime.seconds() > 3.2 && runtime.seconds() < 3.9) {
+            } else if (runtime.seconds() > 4.0 && runtime.seconds() < 4.7) {
                 leftDrive.setPower(-1.0);
                 rightDrive.setPower(-1.0);//go backwards
-            } else if (runtime.seconds() > 3.9 && runtime.seconds() < 4.7) {
+            } else if (runtime.seconds() > 4.7 && runtime.seconds() < 5.5) {
                 //arm.setPower(); 1.0 or -1.0? This is intended to rotate the arm backwards so that we can pull the buildzone. I couldn't figure out what value to use.
-            } else if (runtime.seconds() > 4.7 && runtime.seconds() < 5.9) {
+            } else if (runtime.seconds() > 5.5 && runtime.seconds() < 6.7) {
                 leftDrive.setPower(1.0);//go forward
                 rightDrive.setPower(1.0);
             }//add more if needed...
