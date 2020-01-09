@@ -1,5 +1,3 @@
-
-
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
@@ -22,6 +20,8 @@ public class TeleOpFinal extends LinearOpMode {
     private ElapsedTime runtime = new ElapsedTime();
     private DcMotor leftDrive   = null;
     private DcMotor rightDrive  = null;
+    private DcMotor leftAfterburn  = null;
+    private DcMotor rightAfterburn = null;
     private DcMotor leftIntake  = null;
     private DcMotor rightIntake = null;
     private DcMotor arm = null;
@@ -39,6 +39,8 @@ public class TeleOpFinal extends LinearOpMode {
         rightDrive  = hardwareMap.get(DcMotor.class, "right_drive");
         leftIntake  = hardwareMap.get(DcMotor.class, "left_intake");
         rightIntake = hardwareMap.get(DcMotor.class, "right_intake");
+        leftAfterburn  = hardwareMap.get(DcMotor.class, "left_afterburner");
+        rightAfterburn = hardwareMap.get(DcMotor.class, "right_afterburner");
         arm     = hardwareMap.get(DcMotor.class, "arm");
         wrist   = hardwareMap.get(Servo.class, "wrist");
         finger  = hardwareMap.get(Servo.class, "finger");
@@ -98,25 +100,28 @@ public class TeleOpFinal extends LinearOpMode {
            
 
             // Send calculated power to wheels
-            if(gamepad1.left_stick_button) {
-                leftDrive.setPower(leftPower/2.0);
+            if(!gamepad1.left_stick_button) {
+                leftDrive.setPower(leftPower);
+                leftAfterburn.setPower(leftPower);
             } else {
-                rightDrive.setPower(rightPower);
+                leftDrive.setPower(leftPower);
             }
-            if(gamepad1.right_stick_button) {
-                rightDrive.setPower(rightPower/2.0);
+            if(!gamepad1.right_stick_button) {
+                rightAfterburn.setPower(-rightPower);
+                rightDrive.setPower(rightPower);
             } else {
                 rightDrive.setPower(rightPower);
             }
             if(gamepad1.right_bumper) {
-                rightIntake.setPower(-0.50);
+                rightIntake.setPower(-0.75);
             } else {
-                rightIntake.setPower(rightIntakePower*0.75);
+                rightIntake.setPower(rightIntakePower*1);
             }
             if(gamepad1.left_bumper) {
                 leftIntake.setPower(-0.75);
+                
             } else {
-                leftIntake.setPower(leftIntakePower*0.75);
+                leftIntake.setPower(leftIntakePower*1);
             }
             if(gamepad1.dpad_left) {
                 leftIntakePivot.setPosition(leftIntakePivot.getPosition()-0.001);
@@ -137,16 +142,16 @@ public class TeleOpFinal extends LinearOpMode {
                 finger.setPosition(finger.getPosition()-0.001);
             }
             if(gamepad2.dpad_left){
-                wrist.setPosition(wrist.getPosition()+0.001);
+                wrist.setPosition(1.0);
             }
             if(gamepad2.dpad_right){
-                wrist.setPosition(wrist.getPosition()-0.001);
+                wrist.setPosition(-1.0);
             }
              
             if(gamepad2.left_stick_button) {
-                arm.setPower(-0.75);
+                arm.setPower(-1.0);
             } else {
-                arm.setPower(0.75*armPower);
+                arm.setPower(1.0*armPower);
             }
             // Show the elapsed game time and wheel power.
             telemetry.addData("Status", "Run Time: " + runtime.toString());
