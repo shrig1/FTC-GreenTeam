@@ -86,9 +86,9 @@ public class AutoRedSky extends LinearOpMode {
             double leftPower;
             double rightPower;
 
-            if(runtime.seconds() < 0.8) {
+            if(runtime.seconds() < 1.0) {
                 rightDrive.setPower(-1.0);
-            } else if(runtime.seconds() > 0.8 && runtime.seconds() < 1.4) {
+            } else if(runtime.seconds() > 1.0 && runtime.seconds() < 1.6) {
                 rightDrive.setPower(1.0);
                 leftDrive.setPower(1.0);
             }else{
