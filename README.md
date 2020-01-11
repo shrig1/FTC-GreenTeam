@@ -7,4 +7,4 @@ PLEASE COMMIT THE CODE TO GITHUB TYUSH!!!!!!!!!!!! thank you.
 
 
 
-note: You must have python 3.6 installed for setup.py. Please run this before using repo. You also need java for FTC code(duh)
+note: You must have python 3.6 or greater installed for setup.py. Please run this before using repo. You also need java for FTC code(duh)
