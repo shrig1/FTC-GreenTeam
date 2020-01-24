@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import org.firstinspires.ftc.robotcore.external.navigation.Position;
 import com.qualcomm.robotcore.robot.Robot;
 import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
@@ -12,9 +13,9 @@ import com.qualcomm.robotcore.util.Range;
 
 
 
-@TeleOp(name="TELEOP_FINALE", group="Linear Opmode")
+@TeleOp(name="WIPARM_TELEOP_FINALE", group="Linear Opmode")
 
-public class TeleOpFinal extends LinearOpMode {
+public class TeleOpFinal_Copy extends LinearOpMode {
 
     // Declare OpMode members.
     private ElapsedTime runtime = new ElapsedTime();
@@ -90,7 +91,10 @@ public class TeleOpFinal extends LinearOpMode {
             double rightPower       = -gamepad1.right_stick_y;
             double leftIntakePower  = gamepad1.left_trigger;
             double rightIntakePower = gamepad1.right_trigger;
-            double armPower         = gamepad2.left_stick_y;
+            //double armPower         = gamepad2.left_stick_y;
+            
+            arm.setTargetPosition(arm.getTargetPosition() + Math.round(gamepad2.left_stick_y * 10));
+            
             
             // leftPower    = Range.clip(drive + turn, -1.0, 1.0) ;
             // rightPower   = Range.clip(drive - turn, -1.0, 1.0) ;
@@ -136,17 +140,17 @@ public class TeleOpFinal extends LinearOpMode {
             if(gamepad2.left_bumper) {
                 finger.setPosition(finger.getPosition()-0.001);
             }
-            if(finger.getPosition() > 1.0) {
-                finger.setPosition(1.0);
+            if(finger.getPosition() > 0.7) {
+                finger.setPosition(0.7);
             }
-            if(finger.getPosition() < 0.0) {
-                finger.setPosition(0.0);
+            if(finger.getPosition() < 0.05) {
+                finger.setPosition(0.05);
             }
             if(gamepad2.a) {
-                finger.setPosition(0.0);
+                finger.setPosition(0.05);
             }
             if(gamepad2.b) {
-                finger.setPosition(1.0);
+                finger.setPosition(0.7);
             }
             if(gamepad2.dpad_left){
                 wrist.setPosition(1.0);
@@ -155,21 +159,25 @@ public class TeleOpFinal extends LinearOpMode {
                 wrist.setPosition(-1.0);
             }
             if(gamepad2.right_stick_x > 0.05) {
-                wrist.setPosition(1.0);
+                wrist.setPosition(wrist.getPosition() + (0.1 * gamepad2.right_stick_x));
             } else if(gamepad2.right_stick_x < -0.05) {
-                wrist.setPosition(0.0);
+                wrist.setPosition(wrist.getPosition() - (0.1 * gamepad2.right_stick_x));
                 
             }
-             
+            
+            /* 
             if(gamepad2.left_stick_button) {
                 arm.setPower(armPower);
             } else {
                 arm.setPower(armPower * 0.75);
             }
+            */
+            
             // Show the elapsed game time and wheel power.
             telemetry.addData("Status", "Run Time: " + runtime.toString());
             telemetry.addData("Motors", "left (%.2f), right (%.2f)", leftPower, rightPower);
             telemetry.addData("Servos:", "finger (%.2f), wrist (%.2f), leftIntakePivot (%.2f), rightIntakePivot(%.2f)", finger.getPosition(), wrist.getPosition(), leftIntakePivot.getPosition(), rightIntakePivot.getPosition() );
+            // telemetry.addData("Arm Data:", "target (%.2f), current (%.2f)", arm.getTargetPosition(), arm.getCurrentPosition());
             // telemetry.addData("Servos", "left (%.2f), right (%.2f)", "wrist (%.2f)", leftIntakePivot.getPosition(), rightIntakePivot.getPosition(), wrist.getPosition());
             telemetry.update();
         }

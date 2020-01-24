@@ -50,9 +50,9 @@ import com.qualcomm.robotcore.util.Range;
  * Use Android Studios to Copy this Class, and Paste it into your team's code folder with a new name.
  * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
  */
-@Autonomous(name="AutoRedFound", group="Linear Opmode")
+@Autonomous(name="AutoBlueFound", group="Linear Opmode")
 
-public class AutoRedFound extends LinearOpMode {
+public class AutoBlueFound extends LinearOpMode {
 
     // Declare OpMode members.
     private ElapsedTime runtime = new ElapsedTime();
@@ -83,50 +83,35 @@ public class AutoRedFound extends LinearOpMode {
         while (opModeIsActive()) {
 
             // Setup a variable for each drive wheel to save power level for telemetry
-            if(runtime.seconds() < 1.0) { 
+            if(runtime.seconds() < 1.5) { 
                 leftDrive.setPower(1.0); //go forward
-                rightDrive.setPower(1.0);
-            } else if(runtime.seconds() > 1.0 && runtime.seconds() < 1.6) {
-                rightDrive.setPower(-1.0); //turn left
-                leftDrive.setPower(1.0);
-            } else if(runtime.seconds() > 1.6 && runtime.seconds() < 2.5) {
-                rightDrive.setPower(1.0); //go forward
-                leftDrive.setPower(1.0);
-            }else if(runtime.seconds() > 2.5 && runtime.seconds() < 3.2) {
-                rightDrive.setPower(1.0); //go forward mayormaynotbecorrect
-                leftDrive.setPower(1.0);
-            }
-            //To park underneath the skybridge (has not been tested yet; to be used in case following porgram does not work)
-            /*
-            else {
-                leftDrive.setPower(0.0);
-                rightDrive.setPower(0.0);
-            }
-            
-            else if (runtime.seconds() > 2.8 && runtime.seconds() < 3.6) {
+                rightDrive.setPower(1.0); 
+            } else if (runtime.seconds() > 1.5 && runtime.seconds() < 2.0) {
                 leftDrive.setPower(-1.0); //turn left
                 rightDrive.setPower(1.0);
-            } else if (runtime.seconds() > 3.6 && runtime.seconds() < 5.4) {
+            } else if (runtime.seconds() > 2.0 && runtime.seconds() < 2.5) {
                 leftDrive.setPower(1.0); //go forward
                 rightDrive.setPower(1.0);
-            } else {
-                leftDrive.setPower(0.0); //stop
-                rightDrive.setPower(0.0);
-            }
-            */
-            else if (runtime.seconds() > 3.2 && runtime.seconds() < 4.0) {
-                leftDrive.setPower(-1.0);
-                rightDrive.setPower(1.0);//turn right
-            } else if (runtime.seconds() > 4.0 && runtime.seconds() < 4.7) {
-                leftDrive.setPower(-1.0);
-                rightDrive.setPower(-1.0);//go backwards
-            } else if (runtime.seconds() > 4.7 && runtime.seconds() < 5.5) {
-                //arm.setPower(); 1.0 or -1.0?
-                //wrist.setPower(); 1 or -1.0?
-            } else if (runtime.seconds() > 5.5 && runtime.seconds() < 6.7) {
-                leftDrive.setPower(1.0);//go forward
+            } else if (runtime.seconds() > 2.5 && runtime.seconds() < 2.8) {
+                leftDrive.setPower(-1.0); //turn left s
                 rightDrive.setPower(1.0);
-            }//add more if needed...
+            } else if (runtime.seconds() > 2.8 && runtime.seconds() < 4.8) {
+                leftDrive.setPower(1.0); //go forward
+                rightDrive.setPower(1.0);
+            } /*else if (runtime.seconds() > 5.5 && runtime.seconds() < 5.8) {
+                leftDrive.setPower(1.0); //turn right s
+                rightDrive.setPower(-1.0);
+            } else if (runtime.seconds() > 5.8 && runtime.seconds() < 6.0) {
+                leftDrive.setPower(1.0); //go forward
+                rightDrive.setPower(1.0);
+            } else if (runtime.seconds() > 6.0 && runtime.seconds() < 6.5) {
+               leftDrive.setPower(-1.0); //turn left
+               rightDrive.setPower(1.0);
+            } else if (runtime.seconds() > 6.5 && runtime.seconds() < 9.0) {
+                leftDrive.setPower(1.0); //go forward
+                rightDrive.setPower(1.0);
+            } 
+            */
             // Choose to drive using either Tank Mode, or POV Mode
             // Comment out the method that's not used.  The default below is POV.
 

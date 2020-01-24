@@ -50,14 +50,15 @@ import com.qualcomm.robotcore.util.Range;
  * Use Android Studios to Copy this Class, and Paste it into your team's code folder with a new name.
  * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
  */
-@Autonomous(name="AutoBlueFoundBackup", group="Linear Opmode")
+@Autonomous(name="AutoRedFoundBackup", group="Linear Opmode")
 
-public class AutoBlueFoundBackup extends LinearOpMode {
+public class AutoRedFoundBackup extends LinearOpMode {
 
     // Declare OpMode members.
     private ElapsedTime runtime = new ElapsedTime();
     private DcMotor leftDrive = null;
     private DcMotor rightDrive = null;
+    
 
     @Override
     public void runOpMode() {
@@ -69,6 +70,7 @@ public class AutoBlueFoundBackup extends LinearOpMode {
         // step (using the FTC Robot Controller app on the phone).
         leftDrive  = hardwareMap.get(DcMotor.class, "left_drive");
         rightDrive = hardwareMap.get(DcMotor.class, "right_drive");
+        
 
         // Most robots need the motor on one side to be reversed to drive forward
         // Reverse the motor that runs backwards when connected directly to the battery
@@ -86,12 +88,14 @@ public class AutoBlueFoundBackup extends LinearOpMode {
             double leftPower;
             double rightPower;
 
-            if(runtime.seconds() < 1.0) {
-                leftDrive.setPower(1.0);
-            } else if(runtime.seconds() > 1.0 && runtime.seconds() < 1.6) {
+            if(runtime.seconds() < 1.5) {
+                rightDrive.setPower(1.0);
+            }
+            else if(runtime.seconds() > 1.5 && runtime.seconds() < 1.8) {
                 rightDrive.setPower(1.0);
                 leftDrive.setPower(1.0);
-            } else {
+            } 
+            else {
                 leftDrive.setPower(0);
                 rightDrive.setPower(0);
             }

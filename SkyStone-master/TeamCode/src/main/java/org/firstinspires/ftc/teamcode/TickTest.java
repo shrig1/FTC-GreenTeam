@@ -13,7 +13,7 @@ import com.qualcomm.robotcore.util.Range;
 
 
 
-
+@Disabled
 @Autonomous(name="TickTest", group="Linear Opmode")
 
 public class TickTest extends LinearOpMode {

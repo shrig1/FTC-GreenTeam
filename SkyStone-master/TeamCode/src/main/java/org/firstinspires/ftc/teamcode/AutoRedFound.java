@@ -1,7 +1,3 @@
-// UNTESTED
-
-//8831
-
 /* Copyright (c) 2017 FIRST. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -31,9 +27,10 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package org.firstinspires.ftc.robotcontroller.external.samples;
+package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -53,10 +50,9 @@ import com.qualcomm.robotcore.util.Range;
  * Use Android Studios to Copy this Class, and Paste it into your team's code folder with a new name.
  * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
  */
+@Autonomous(name="AutoRed", group="Linear Opmode")
 
-@TeleOp(name="Test/Base: Linear Drive", group="Linear Opmode")
-//@Disabled
-public class BasicDrive extends LinearOpMode {
+public class AutoRedFound extends LinearOpMode {
 
     // Declare OpMode members.
     private ElapsedTime runtime = new ElapsedTime();
@@ -73,59 +69,57 @@ public class BasicDrive extends LinearOpMode {
         // step (using the FTC Robot Controller app on the phone).
         leftDrive  = hardwareMap.get(DcMotor.class, "left_drive");
         rightDrive = hardwareMap.get(DcMotor.class, "right_drive");
-        //tool = hardwareMap.get(DcMotor.class, "tool");
 
         // Most robots need the motor on one side to be reversed to drive forward
         // Reverse the motor that runs backwards when connected directly to the battery
-        leftDrive.setDirection(DcMotor.Direction.FORWARD);
-        rightDrive.setDirection(DcMotor.Direction.REVERSE);
-        
+        leftDrive.setDirection(DcMotor.Direction.REVERSE);
+        rightDrive.setDirection(DcMotor.Direction.FORWARD);
+
         // Wait for the game to start (driver presses PLAY)
         waitForStart();
         runtime.reset();
-        //reset motors once program finishes todo
+
         // run until the end of the match (driver presses STOP)
         while (opModeIsActive()) {
 
             // Setup a variable for each drive wheel to save power level for telemetry
-            double leftPower;
-            double rightPower;
-            // double handPower;
+            if(runtime.seconds() < 2.5) { 
+                leftDrive.setPower(1.0); //go forward
+                rightDrive.setPower(1.0);
+            } else if (runtime.seconds() > 2.5 && runtime.seconds() < 3.0) {
+                leftDrive.setPower(1.0); //turn right
+                rightDrive.setPower(-1.0);
+            } /*else if (runtime.seconds() > 3.0 && runtime.seconds() < 3.2) {
+                leftDrive.setPower(1.0); //go forward
+                rightDrive.setPower(1.0);
+            } else if (runtime.seconds() > 3.2 && runtime.seconds() < 3.5) {
+                leftDrive.setPower(1.0); //turn right s
+                rightDrive.setPower(-1.0);
+            } else if (runtime.seconds() > 3.5 && runtime.seconds() < 5.5) {
+                leftDrive.setPower(1.0); //go forward
+                rightDrive.setPower(1.0);
+            } else if (runtime.seconds() > 5.5 && runtime.seconds() < 5.8) {
+                leftDrive.setPower(-1.0); //turn left s
+                rightDrive.setPower(1.0);
+            } else if (runtime.seconds() > 5.8 && runtime.seconds() < 6.0) {
+                leftDrive.setPower(1.0); //go forward
+                rightDrive.setPower(1.0);
+            } else if (runtime.seconds() > 6.0 && runtime.seconds() < 6.5) {
+               leftDrive.setPower(1.0); //turn right
+               rightDrive.setPower(-1.0);
+            } else if (runtime.seconds() > 6.5 && runtime.seconds() < 9.0) {
+                leftDrive.setPower(1.0); //go forward
+                rightDrive.setPower(1.0);
+            } //DOES THIS WORK?
+            */
             // Choose to drive using either Tank Mode, or POV Mode
             // Comment out the method that's not used.  The default below is POV.
 
             // POV Mode uses left stick to go forward, and right stick to turn.
-            // - This uses basic math to combine motions and is easier to drive straight.
-            double drive = -gamepad1.left_stick_y;
-            double turn  =  gamepad1.right_stick_x;
-            // handPower = gamepad1.right_trigger;
-            // Allow for an "overdrive/sprint" mode
-            /*
-            if(gamepad1.a) {
-                leftPower    = Range.clip(drive + turn, -1.0, 1.0);
-                rightPower   = Range.clip(drive - turn, -1.0, 1.0);
-            } else {
-                leftPower    = Range.clip(drive + turn, -1.0, 1.0)/2;
-                rightPower   = Range.clip(drive - turn, -1.0, 1.0)/2;
-            }
-            */
-            
-            // Tank Mode uses one stick to control each wheel.
-            // - This requires no math, but it is hard to drive forward slowly and keep straight.
-            leftPower  = -gamepad1.left_stick_y ;
-            rightPower = -gamepad1.right_stick_y ;
-
-            // Send calculated power to wheels
-            leftDrive.setPower(leftPower);
-            rightDrive.setPower(rightPower);
-
-            // grabbytime
-            //tool.setPower(grab);
-
+            // - This uses basic math to combine motions and is easier to drive
             // Show the elapsed game time and wheel power.
-            telemetry.addData("Status", "Run Time: " + runtime.toString());
-            telemetry.addData("Motors", "left (%.2f), right (%.2f), no hand :( ", leftPower, rightPower/*, handPower*/);
-            telemetry.addData("Gamepad", gamepad1);
+            telemetry.addData("Status", "Run Time: " + runtime.seconds());
+            //telemetry.addData("Motors", "left (%.2f), right (%.2f)", leftPower, rightPower);
             telemetry.update();
         }
     }

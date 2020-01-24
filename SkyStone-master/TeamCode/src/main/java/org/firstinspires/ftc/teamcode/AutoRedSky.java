@@ -50,14 +50,15 @@ import com.qualcomm.robotcore.util.Range;
  * Use Android Studios to Copy this Class, and Paste it into your team's code folder with a new name.
  * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
  */
-@Autonomous(name="AutoB", group="Linear Opmode")
+@Autonomous(name="AutoRedSky", group="Linear Opmode")
 
-public class AutoBlueFound extends LinearOpMode {
+public class AutoRedSky extends LinearOpMode {
 
     // Declare OpMode members.
     private ElapsedTime runtime = new ElapsedTime();
     private DcMotor leftDrive = null;
     private DcMotor rightDrive = null;
+    
 
     @Override
     public void runOpMode() {
@@ -69,6 +70,7 @@ public class AutoBlueFound extends LinearOpMode {
         // step (using the FTC Robot Controller app on the phone).
         leftDrive  = hardwareMap.get(DcMotor.class, "left_drive");
         rightDrive = hardwareMap.get(DcMotor.class, "right_drive");
+        
 
         // Most robots need the motor on one side to be reversed to drive forward
         // Reverse the motor that runs backwards when connected directly to the battery
@@ -83,54 +85,25 @@ public class AutoBlueFound extends LinearOpMode {
         while (opModeIsActive()) {
 
             // Setup a variable for each drive wheel to save power level for telemetry
-            if(runtime.seconds() < 1.0) { 
-                leftDrive.setPower(1.0); //go forward
+            double leftPower;
+            double rightPower;
+
+            if(runtime.seconds() < 1.5) {
                 rightDrive.setPower(1.0);
-            } else if(runtime.seconds() > 1.0 && runtime.seconds() < 1.6) {
-                rightDrive.setPower(1.0); //turn right
-                leftDrive.setPower(-1.0);
-            } else if(runtime.seconds() > 1.6 && runtime.seconds() < 2.5) {
-                rightDrive.setPower(1.0); //go forward
-                leftDrive.setPower(1.0);
-            }else if(runtime.seconds() > 2.5 && runtime.seconds() < 3.2) {
-                rightDrive.setPower(1.0); //go forward
-                leftDrive.setPower(1.0);
             }
-            //To park underneath the skybridge (has not been tested yet; to be used in case following porgram does not work)
-            /*
+            else if(runtime.seconds() > 1.5 && runtime.seconds() < 1.8) {
+                rightDrive.setPower(1.0);
+                leftDrive.setPower(1.0);
+            } 
             else {
-                leftDrive.setPower(0.0);
-                rightDrive.setPower(0.0);
+                leftDrive.setPower(0);
+                rightDrive.setPower(0);
             }
-            
-            else if (runtime.seconds() > 2.8 && runtime.seconds() < 3.6) {
-                leftDrive.setPower(-1.0); //turn left
-                rightDrive.setPower(1.0);
-            } else if (runtime.seconds() > 3.6 && runtime.seconds() < 5.4) {
-                leftDrive.setPower(1.0); //go forward
-                rightDrive.setPower(1.0);
-            } else {
-                leftDrive.setPower(0.0); //stop
-                rightDrive.setPower(0.0);
-            }
-            */
-            else if (runtime.seconds() > 3.2 && runtime.seconds() < 4.0) {
-                leftDrive.setPower(1.0);
-                rightDrive.setPower(-1.0);//turn left
-            } else if (runtime.seconds() > 4.0 && runtime.seconds() < 4.7) {
-                leftDrive.setPower(-1.0);
-                rightDrive.setPower(-1.0);//go backwards
-            } else if (runtime.seconds() > 4.7 && runtime.seconds() < 5.5) {
-                //arm.setPower(); 1.0 or -1.0? This is intended to rotate the arm backwards so that we can pull the buildzone. I couldn't figure out what value to use.
-            } else if (runtime.seconds() > 5.5 && runtime.seconds() < 6.7) {
-                leftDrive.setPower(1.0);//go forward
-                rightDrive.setPower(1.0);
-            }//add more if needed...
             // Choose to drive using either Tank Mode, or POV Mode
             // Comment out the method that's not used.  The default below is POV.
 
             // POV Mode uses left stick to go forward, and right stick to turn.
-            // - This uses basic math to combine motions and is easier to drive
+            // - This uses basic math to combine motions and is easier to dri
             // Show the elapsed game time and wheel power.
             telemetry.addData("Status", "Run Time: " + runtime.seconds());
             //telemetry.addData("Motors", "left (%.2f), right (%.2f)", leftPower, rightPower);
